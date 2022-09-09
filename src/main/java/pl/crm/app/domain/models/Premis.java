@@ -1,4 +1,4 @@
-package pl.crm.app.domain;
+package pl.crm.app.domain.models;
 
 import com.sun.istack.NotNull;
 
