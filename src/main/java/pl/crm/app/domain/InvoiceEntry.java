@@ -1,4 +1,4 @@
-package pl.crm.domain;
+package pl.crm.app.domain;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

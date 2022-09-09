@@ -1,8 +1,8 @@
-package pl.crm.controllers;
+package pl.crm.app.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pl.crm.domain.*;
+import pl.crm.app.domain.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
