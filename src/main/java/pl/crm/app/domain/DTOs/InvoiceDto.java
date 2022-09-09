@@ -1,4 +1,4 @@
-package pl.crm.app.domain;
+package pl.crm.app.domain.DTOs;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

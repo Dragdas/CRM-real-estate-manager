@@ -1,4 +1,4 @@
-package pl.crm.app.domain;
+package pl.crm.app.domain.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
