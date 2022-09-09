@@ -16,7 +16,7 @@ public class Tenant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "tenant_id")
-    private long id;
+    private Long id;
 
     @Column(name = "user_name")
     private String userName;

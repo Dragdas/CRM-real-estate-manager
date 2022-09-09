@@ -4,9 +4,11 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.crm.app.domain.DTOs.*;
+import pl.crm.app.domain.models.Tenant;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -24,9 +26,9 @@ public class ManagerController {
     }
 
     @PutMapping(value = "/tenant")
-    public ResponseEntity<TenantAccountDto> updateTenantAccount(@RequestBody TenantAccountDto tenantAccountDto) {
+    public ResponseEntity<Tenant> updateTenantAccount(@RequestBody TenantAccountDto tenantAccountDto) {
         List<InvoiceDto> invoiceDtos = new ArrayList<>();
-        return ResponseEntity.ok(new TenantAccountDto(0L, "Aaaaaa", "Bbbbb", invoiceDtos));
+        return ResponseEntity.ok(new Tenant(0L, "Aaaaaa", "Bbbbb", Collections.emptyList(),Collections.emptyList()));
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, value = "/manager")
@@ -159,14 +161,7 @@ public class ManagerController {
 
     @GetMapping(value = "/invoice/{invoiceId}")
     public ResponseEntity<InvoiceDto> getInvoice(@PathVariable Long invoiceId) {
-        return ResponseEntity.ok(new InvoiceDto(
-                        0L,
-                        new OwnerDto(0L, "Aaaaa", new ArrayList<>(), new ManagerAccountDto(0L,"","", new ArrayList<>())),
-                        new TenantAccountDto(0L,"","", new ArrayList<>()),
-                        new ArrayList<>(),
-                        "ABCD"
-                )
-        );
+        return ResponseEntity.ok(null );
     }
 
     @GetMapping(value = "/invoice")
@@ -187,14 +182,7 @@ public class ManagerController {
 
     @PutMapping(value = "/invoice")
     public ResponseEntity<InvoiceDto> updateInvoice(@RequestBody InvoiceDto invoiceDto) {
-        return ResponseEntity.ok(new InvoiceDto(
-                0L,
-                new OwnerDto(0L, "Aaaaa", new ArrayList<>(), new ManagerAccountDto(0L,"","", new ArrayList<>())),
-                new TenantAccountDto(0L,"","", new ArrayList<>()),
-                new ArrayList<>(),
-                "ABCD"
-                )
-        );
+        return ResponseEntity.ok(null );
     }
 
     @GetMapping(value = "/inv_entry/{invEntryId}")
