@@ -28,13 +28,7 @@ public class InvoiceController {
     //Get invoice by id
     @GetMapping(value = "/inv_id/{invoiceId}")
     public ResponseEntity<InvoiceDto> getInvoicesById(@PathVariable Long invoiceId) {
-        return ResponseEntity.ok(new InvoiceDto(
-                0L,
-                new OwnerDto(0L, "Aaaaa", new ArrayList<>(), new ManagerAccountDto(0L,"","", new ArrayList<>())),
-                new TenantAccountDto(0L,"","", new ArrayList<>()),
-                new ArrayList<>(),
-                "ABCD"
-        ));
+        return ResponseEntity.ok(null);
     }
 
 
