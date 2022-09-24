@@ -51,6 +51,9 @@ public class ManagerController {
     public ResponseEntity<OwnerDto> getOwner(@PathVariable Long ownerId) {
         return ResponseEntity.ok(new OwnerDto(0L,
                 "Aaaaa",
+                "Aaaaa",
+                "Aaaaa",
+                "Aaaaa",
                 new ArrayList<>(),
                 new ManagerAccountDto(0L,"","", new ArrayList<>())
         ));
@@ -76,6 +79,9 @@ public class ManagerController {
     public ResponseEntity<OwnerDto> updateOwner(@RequestBody OwnerDto ownerDto) {
         return ResponseEntity.ok(new OwnerDto(
                 0L,
+                "Aaaaa",
+                "Aaaaa",
+                "Aaaaa",
                 "Aaaaa",
                 new ArrayList<>(),
                 new ManagerAccountDto(0L,"","", new ArrayList<>())
