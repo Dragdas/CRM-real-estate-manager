@@ -21,6 +21,15 @@ public class Owner {
     @Column(name = "owner_name")
     private String ownerName;
 
+    @Column(name = "forwarding_address")
+    private String forwardingAddress;
+
+    @Column(name = "data_to_invoice")
+    private String dataToInvoice;
+
+    @Column(name = "address_to_invoice")
+    private String addressToInvoice;
+
     @OneToMany(targetEntity = Invoice.class, mappedBy = "issuer")
     private List<Invoice> invoices;
 
