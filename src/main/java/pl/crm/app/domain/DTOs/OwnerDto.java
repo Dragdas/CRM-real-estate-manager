@@ -3,7 +3,6 @@ package pl.crm.app.domain.DTOs;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import javax.persistence.Column;
 import java.util.List;
 
 @Getter

@@ -1,12 +1,9 @@
 package pl.crm.app.domain.mappers;
 
 import org.springframework.stereotype.Service;
-import pl.crm.app.domain.DTOs.OwnerDto;
 import pl.crm.app.domain.DTOs.OwnersDataDTOtoTable;
-import pl.crm.app.domain.models.Manager;
 import pl.crm.app.domain.models.Owner;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -29,10 +26,7 @@ public class OwnerMapper {
                 ownersDataDTOtoTable.getPersonalData(),
                 ownersDataDTOtoTable.getForwardingAddress(),
                 ownersDataDTOtoTable.getDataToInvoice(),
-                ownersDataDTOtoTable.getAddressToInvoice(),
-                new ArrayList<>(),
-                new Manager(),
-                new ArrayList<>()
+                ownersDataDTOtoTable.getAddressToInvoice()
         );
     }
 

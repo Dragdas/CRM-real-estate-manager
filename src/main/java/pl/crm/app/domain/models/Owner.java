@@ -13,10 +13,18 @@ import java.util.List;
 @Entity(name = "owner")
 public class Owner {
 
+    public Owner(Long id, String ownerName, String forwardingAddress, String dataToInvoice, String addressToInvoice) {
+        this.id = id;
+        this.ownerName = ownerName;
+        this.forwardingAddress = forwardingAddress;
+        this.dataToInvoice = dataToInvoice;
+        this.addressToInvoice = addressToInvoice;
+    }
+
     @Id
     @GeneratedValue
     @Column(name = "owner_id", nullable = false)
-    private long id;
+    private Long id;
 
     @Column(name = "owner_name")
     private String ownerName;
