@@ -10,7 +10,7 @@ public class Premis {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "premis_id")
-    private long id;
+    private Long id;
 
     @Column(name = "identifier")
     private String identifier;

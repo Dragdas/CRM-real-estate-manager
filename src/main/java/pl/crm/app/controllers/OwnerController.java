@@ -4,15 +4,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pl.crm.app.domain.DTOs.ManagerAccountDto;
-import pl.crm.app.domain.DTOs.OwnerDto;
 import pl.crm.app.domain.DTOs.OwnersDataDTOtoTable;
 import pl.crm.app.domain.mappers.OwnerMapper;
 import pl.crm.app.domain.models.Owner;
 import pl.crm.app.errorHandling.exceptions.OwnerNotFoundException;
 import pl.crm.app.services.OwnerService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @CrossOrigin("*")
