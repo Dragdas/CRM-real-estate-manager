@@ -5,11 +5,11 @@ import com.sun.istack.NotNull;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
-@Entity(name = "premis")
-public class Premis {
+@Entity(name = "premise")
+public class Premise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "premis_id")
+    @Column(name = "premise_id")
     private Long id;
 
     @Column(name = "identifier")

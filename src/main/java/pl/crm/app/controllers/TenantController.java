@@ -23,15 +23,16 @@ public class TenantController {
 
     @GetMapping
     public ResponseEntity<List<Tenant>> getTenants() {
+
         return ResponseEntity.ok(tenantService.getAllTenants());
     }
 
-    @GetMapping(value = "/byOwner/{ownerId}")
+    @GetMapping(value = "/byOwner/{ownerId}")//todo by Krzysiek
     public ResponseEntity<List<Tenant>> getTenantsByOwnerId(@PathVariable Long ownerId) {
         return ResponseEntity.ok(Collections.emptyList());
     }
 
-    @GetMapping(value = "/byRealEstate/{realEstateId}")
+    @GetMapping(value = "/byRealEstate/{realEstateId}")//todo by Krzysiek
     public ResponseEntity<List<Tenant>> getTenantsByRealEstateId(@PathVariable Long realEstateId) {
         return ResponseEntity.ok(Collections.emptyList());
     }
@@ -46,14 +47,14 @@ public class TenantController {
         return ResponseEntity.ok(tenantService.addTenant(tenantAccountDto));
     }
 
-    //Edit tenant
-    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE)//todo by Krzysiek rozbić na akcje w stylu add invoice, rent premiss, leave premis
     public ResponseEntity<Tenant> updateTenant(@RequestBody TenantAccountDto tenantAccountDto) {
         return ResponseEntity.ok(new Tenant(0L, "Aaaaaa", "Bbbbb", Collections.emptyList(),Collections.emptyList()));
     }
 
-    @DeleteMapping(value = "{tenantId}")
+    @DeleteMapping(value = "{tenantId}")//todo by Krzysiek
     public ResponseEntity<Void> updateTenant(@PathVariable Long tenantId) {
+
         return ResponseEntity.ok().build();
     }
 }
