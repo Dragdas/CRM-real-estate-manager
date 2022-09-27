@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import pl.crm.app.errorHandling.exceptions.InvoiceNotFoundException;
 import pl.crm.app.errorHandling.exceptions.OwnerNotFoundException;
 import pl.crm.app.errorHandling.exceptions.TenantNotFoundException;
 
@@ -20,6 +21,12 @@ public class GlobalHttpErrorHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(OwnerNotFoundException.class)
     public ResponseEntity<Object> handleOwnerNotFoundException(OwnerNotFoundException exception) {
         return new ResponseEntity<>("Owner with provided id does not exist in database",
+                HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(InvoiceNotFoundException.class)
+    public ResponseEntity<Object> handleInvoiceNotFoundException (InvoiceNotFoundException exception) {
+        return new ResponseEntity<>("Invoice with provided id does not exist in database",
                 HttpStatus.BAD_REQUEST);
     }
 }

@@ -1,2 +1,4 @@
-package pl.crm.app.errorHandling.exceptions;public class InvoiceNotFoundException {
+package pl.crm.app.errorHandling.exceptions;
+
+public class InvoiceNotFoundException extends Exception{
 }
