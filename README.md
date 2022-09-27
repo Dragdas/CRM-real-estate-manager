@@ -108,3 +108,62 @@ java -jar PressArticleApi-0.0.1-SNAPSHOT.jar
 Deploy został przeprowadzony z użyciem Heroku pod adresem: 
 
 https://crm-real-estate-manager.herokuapp.com/
+
+<details><summary> 1. Właściciele we wspólnocie </summary>
+<p>
+
+#### Get all owners
+
+```http
+  GET /v1/owners
+```
+
+#### Get owner
+
+```http
+  GET /v1/owners/${ownerId}
+```
+
+| Parameter | Type   | Description                        |
+| :-------- | :----- | :--------------------------------- |
+| `ownerId` | `Long` | **Required**. Id of owner to fetch |
+
+#### Delete owner
+
+```http
+  DELETE /v1/owners/${ownerId}
+```
+
+| Parameter | Type   | Description                         |
+| :-------- | :----- | :---------------------------------  |
+| `ownerId` | `Long` | **Required**. Id of owner to delete |
+
+#### Edit owner
+
+```http
+  PUT /v1/owners
+```
+
+| Parameter           | Type     | Description                       |
+| :------------------ | :------- | :-------------------------------  |
+| `ownerId`           | `String` | **Required**. Id of owner to edit |
+| `personalData`      | `String` | Owner's personal data             |
+| `forwardingAddress` | `String` | Accomodation address              |
+| `dataToInvoice`     | `String` | Data to invoice                   |
+| `addressToInvoice`  | `String` | Address to send invoice to        |
+
+#### Create owner
+
+```http
+  POST /v1/owners
+```
+
+| Parameter           | Type     | Description                       |
+| :------------------ | :------- | :-------------------------------  |
+| `ownerId`           | `String` | **Required**. Id of owner to edit |
+| `personalData`      | `String` | Owner's personal data             |
+| `forwardingAddress` | `String` | Accomodation address              |
+| `dataToInvoice`     | `String` | Data to invoice                   |
+| `addressToInvoice`  | `String` | Address to send invoice to        |
+</p>
+</details>
