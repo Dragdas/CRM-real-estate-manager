@@ -29,6 +29,8 @@ public class GlobalHttpErrorHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(InvoiceNotFoundException.class)
     public ResponseEntity<Object> handleInvoiceNotFoundException (InvoiceNotFoundException exception) {
         return new ResponseEntity<>("Invoice with provided id does not exist in database",
+                HttpStatus.BAD_REQUEST);
+    }
 
     @ExceptionHandler(RealEstateNotFound.class)
     public ResponseEntity<Object> handleRealEstateNotFoundException(RealEstateNotFound exception) {
