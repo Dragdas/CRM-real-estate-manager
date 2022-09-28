@@ -27,7 +27,7 @@ public class Tenant {
     @OneToMany(targetEntity = Invoice.class, mappedBy = "recipient")
     private List<Invoice> invoices;
 
-    @OneToMany(targetEntity = Premis.class, mappedBy = "tenant")
-    private List<Premis> premises;
+    @OneToMany(targetEntity = Premise.class, mappedBy = "tenant")
+    private List<Premise> premises;
 
 }

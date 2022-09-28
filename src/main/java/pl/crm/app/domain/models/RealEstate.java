@@ -21,7 +21,9 @@ public class RealEstate {
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
-    @OneToMany(targetEntity = Premis.class, mappedBy = "realEstate")
-    private List<Premis> premises;
+    @OneToMany(targetEntity = Premise.class, mappedBy = "realEstate")
+    private List<Premise> premises;
+
+
 
 }
