@@ -5,10 +5,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.crm.app.domain.DTOs.RealEstateDto;
 import pl.crm.app.domain.models.Owner;
+import pl.crm.app.domain.models.Premise;
 import pl.crm.app.domain.models.RealEstate;
 import pl.crm.app.errorHandling.exceptions.OwnerNotFoundException;
+import pl.crm.app.errorHandling.exceptions.PremiseNotFound;
 import pl.crm.app.errorHandling.exceptions.RealEstateNotFound;
 import pl.crm.app.repositories.OwnerRepository;
+import pl.crm.app.repositories.PremiseRepository;
 import pl.crm.app.repositories.RealEstateRepository;
 
 import java.util.ArrayList;
@@ -20,6 +23,7 @@ public class RealEstateService {
 
     private final RealEstateRepository realEstateRepository;
     private final OwnerRepository ownerRepository;
+    private final PremiseRepository premiseRepository;
 
     public List<RealEstate> getAllRealEstates(){return realEstateRepository.findAll();}
 
@@ -45,5 +49,13 @@ public class RealEstateService {
         return realEstateRepository.save(realEstate);
     }
 
+    @Transactional
+    public RealEstate updateAddPremise(long realEstateId, long premiseId) throws RealEstateNotFound, PremiseNotFound {
+        RealEstate realEstate = realEstateRepository.findById(realEstateId).orElseThrow(RealEstateNotFound::new);
+        Premise premise = premiseRepository.findById(premiseId).orElseThrow(PremiseNotFound::new);
+
+        realEstate.getPremises().add(premise);
+        return realEstateRepository.save(realEstate);
+    }
 
 }

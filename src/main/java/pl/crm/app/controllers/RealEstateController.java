@@ -7,8 +7,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.crm.app.domain.DTOs.RealEstateDto;
 import pl.crm.app.domain.models.RealEstate;
-import pl.crm.app.domain.models.Tenant;
 import pl.crm.app.errorHandling.exceptions.OwnerNotFoundException;
+import pl.crm.app.errorHandling.exceptions.PremiseNotFound;
 import pl.crm.app.errorHandling.exceptions.RealEstateNotFound;
 import pl.crm.app.services.RealEstateService;
 
@@ -45,19 +45,26 @@ public class RealEstateController {
         return ResponseEntity.ok(realEstateService.addRealEstate(realEstateDto));
     }
 
-    @PutMapping
+    @PutMapping(value = "/updateOwner")
     public ResponseEntity<RealEstate> updateRealEstateOwner(@RequestParam long realEstateID,
-                                                            @RequestParam long ownerId)
+                                                            @RequestParam long newOwnerId)
                                                             throws OwnerNotFoundException,
                                                             RealEstateNotFound {
-        return ResponseEntity.ok(realEstateService.updateOwner(realEstateID,ownerId));
+        return ResponseEntity.ok(realEstateService.updateOwner(realEstateID,newOwnerId));
     }
 
-    //update - add premis
+    @PutMapping(value = "/addPremise")
+    public ResponseEntity<RealEstate> addPremise(@RequestParam long realEstateId,
+                                                 @RequestParam long newPremiseId)
+                                                throws RealEstateNotFound,
+                                                PremiseNotFound {
+        return ResponseEntity.ok(realEstateService.updateAddPremise(realEstateId, newPremiseId));
+    }
 
 
 
-    //update - delete premis //TODO by krzysiek
+
+    //update - delete premis //TODO by krzysiek - przemyśleć zabezpieczenia, kaskadowanie itp
     //delete - niemożliwe jeżeli są jakieś lokale //TODO by krzysiek
 
 
