@@ -1,9 +1,18 @@
 package pl.crm.app.domain.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity(name = "invoice_entry")
+@Getter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class InvoiceEntry {
 
     @Id

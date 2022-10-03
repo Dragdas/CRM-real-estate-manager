@@ -127,3 +127,62 @@ Udostępnia metody do:
 - PlaceholderPlaceholderPlaceholder
 </p>
 </details>
+<details><summary> 1. Właściciele we wspólnocie </summary>
+<p>
+
+#### Get all owners
+
+```http
+  GET /v1/owners
+```
+
+#### Get owner
+
+```http
+  GET /v1/owners/${ownerId}
+```
+
+| Parameter | Type   | Description                        |
+| :-------- | :----- | :--------------------------------- |
+| `ownerId` | `Long` | **Required**. Id of owner to fetch |
+
+#### Delete owner
+
+```http
+  DELETE /v1/owners/${ownerId}
+```
+
+| Parameter | Type   | Description                         |
+| :-------- | :----- | :---------------------------------  |
+| `ownerId` | `Long` | **Required**. Id of owner to delete |
+
+#### Edit owner
+
+```http
+  PUT /v1/owners
+```
+
+| Parameter           | Type     | Description                       |
+| :------------------ | :------- | :-------------------------------  |
+| `ownerId`           | `String` | **Required**. Id of owner to edit |
+| `personalData`      | `String` | Owner's personal data             |
+| `forwardingAddress` | `String` | Accomodation address              |
+| `dataToInvoice`     | `String` | Data to invoice                   |
+| `addressToInvoice`  | `String` | Address to send invoice to        |
+
+#### Create owner
+
+```http
+  POST /v1/owners
+```
+
+| Parameter           | Type     | Description                       |
+| :------------------ | :------- | :-------------------------------  |
+| `ownerId`           | `String` | **Required**. Id of owner to edit |
+| `personalData`      | `String` | Owner's personal data             |
+| `forwardingAddress` | `String` | Accomodation address              |
+| `dataToInvoice`     | `String` | Data to invoice                   |
+| `addressToInvoice`  | `String` | Address to send invoice to        |
+</p>
+</details>
+
