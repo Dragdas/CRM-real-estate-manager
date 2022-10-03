@@ -10,5 +10,5 @@ import java.util.List;
 public class RealEstateDto {
     private Long id;
     private Long ownerId;
-    private List<PremisDto> premises;
+    private List<PremiseDto> premises;
 }

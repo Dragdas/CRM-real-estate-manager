@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 @Getter
 @AllArgsConstructor
-public class PremisDto {
+public class PremiseDto {
     private Long id;
     private String identifier;
     private Long tenantId;
