@@ -1,5 +1,6 @@
 package pl.crm.app.domain.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class RealEstate {
 
     @ManyToOne
     @JoinColumn(name = "owner_id")
+    @JsonManagedReference
     private Owner owner;
 
     @OneToMany(targetEntity = Premise.class, mappedBy = "realEstate")
