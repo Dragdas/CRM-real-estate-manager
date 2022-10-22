@@ -12,7 +12,7 @@ public class OwnerDto {
     private String ownerName;
     private String forwardingAddress;
     private String dataToInvoice;
-    private String addressToInvoice;
+    private String apartmentAddress;
     private List<InvoiceDto> invoices;
     private ManagerAccountDto manager;
 }
