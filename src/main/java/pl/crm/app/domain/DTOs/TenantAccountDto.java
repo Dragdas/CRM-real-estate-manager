@@ -20,5 +20,5 @@ public class TenantAccountDto {
     @Nullable
     private List<InvoiceDto> invoices;
     @Nullable
-    private List<PremisDto> premises;
+    private List<PremiseDto> premises;
 }

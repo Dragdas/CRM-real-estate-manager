@@ -1,4 +1,4 @@
-# CRM Real Estate Manager
+git# CRM Real Estate Manager
 
 ### Dlaczego powstał ten projekt?
 
@@ -109,6 +109,24 @@ Deploy został przeprowadzony z użyciem Heroku pod adresem:
 
 https://crm-real-estate-manager.herokuapp.com/
 
+<details><summary> real estate controller </summary>
+<p>
+Zmapowany pod adresem 
+
+```
+root- https://crm-real-estate-manager.herokuapp.com/v1/realestate
+```
+Udostępnia metody do: 
+- GET - root - zwraca wszystkie nieruchomości
+- GET - root + /id/{realEstateId} - zwraca nieruchomość o podanym ID
+- GET - root + /owner/{ownerId}" - zwraca wszystkie nieruchomości danego właściciela 
+- POST - root - dodaje nieruchomość wymaga w request body JSON w którym jest sprecyzowany przynajmniej ownerId
+- PUT - root + /updateOwner?realEstateID
+
+- PlaceholderPlaceholderPlaceholder
+- PlaceholderPlaceholderPlaceholder
+</p>
+</details>
 <details><summary> 1. Właściciele we wspólnocie </summary>
 <p>
 
@@ -167,3 +185,4 @@ https://crm-real-estate-manager.herokuapp.com/
 | `addressToInvoice`  | `String` | Address to send invoice to        |
 </p>
 </details>
+

@@ -21,7 +21,7 @@ public class RealEstate {
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
-    @OneToMany(targetEntity = Premise.class, mappedBy = "realEstate")
+    @OneToMany(targetEntity = Premise.class, mappedBy = "realEstate")// TODO ttutaj jest jakis bug przez co encje sie zapętlają
     private List<Premise> premises;
 
 

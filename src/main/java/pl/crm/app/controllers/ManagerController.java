@@ -126,8 +126,8 @@ public class ManagerController {
     }
 
     @GetMapping(value = "/premis/{premisId}")
-    public ResponseEntity<PremisDto> getPremis(@PathVariable Long premisId) {
-        return ResponseEntity.ok(new PremisDto(
+    public ResponseEntity<PremiseDto> getPremis(@PathVariable Long premisId) {
+        return ResponseEntity.ok(new PremiseDto(
                         0L,
                         "ABCDE",
                         123L,
@@ -138,9 +138,9 @@ public class ManagerController {
     }
 
     @GetMapping(value = "/premis")
-    public ResponseEntity<List<PremisDto>> getPremises() {
-        List<PremisDto> premisDtoList = new ArrayList<>();
-        return ResponseEntity.ok(premisDtoList);
+    public ResponseEntity<List<PremiseDto>> getPremises() {
+        List<PremiseDto> premiseDtoList = new ArrayList<>();
+        return ResponseEntity.ok(premiseDtoList);
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, value = "/premis")
@@ -154,8 +154,8 @@ public class ManagerController {
     }
 
     @PutMapping(value = "/premis")
-    public ResponseEntity<PremisDto> updatePremis(@RequestBody PremisDto premisDto) {
-        return ResponseEntity.ok(new PremisDto(
+    public ResponseEntity<PremiseDto> updatePremis(@RequestBody PremiseDto premiseDto) {
+        return ResponseEntity.ok(new PremiseDto(
                         0L,
                         "ABCDE",
                         123L,

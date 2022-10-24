@@ -1,11 +1,17 @@
 package pl.crm.app.domain.models;
 
 import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity(name = "premise")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class Premise {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
