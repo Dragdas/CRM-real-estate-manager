@@ -1,5 +1,6 @@
 package pl.crm.app.domain.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -46,5 +47,6 @@ public class Owner {
     private Manager manager;
 
     @OneToMany(targetEntity = RealEstate.class, mappedBy = "owner")
+    @JsonBackReference
     private List<RealEstate> realEstates;
 }

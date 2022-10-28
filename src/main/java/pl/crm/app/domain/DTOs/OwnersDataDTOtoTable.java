@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class OwnersDataDTOtoTable {
-    private Long ownerId;
+    private Long id;
     private String personalData;
     private String forwardingAddress;
     private String dataToInvoice;
