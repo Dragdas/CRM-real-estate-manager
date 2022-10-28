@@ -16,7 +16,7 @@ public class OwnerMapper {
                 owner.getOwnerName(),
                 owner.getForwardingAddress(),
                 owner.getDataToInvoice(),
-                owner.getAddressToInvoice()
+                owner.getApartmentAddress()
         );
     }
 
@@ -26,7 +26,7 @@ public class OwnerMapper {
                 ownersDataDTOtoTable.getPersonalData(),
                 ownersDataDTOtoTable.getForwardingAddress(),
                 ownersDataDTOtoTable.getDataToInvoice(),
-                ownersDataDTOtoTable.getAddressToInvoice()
+                ownersDataDTOtoTable.getApartmentAddress()
         );
     }
 

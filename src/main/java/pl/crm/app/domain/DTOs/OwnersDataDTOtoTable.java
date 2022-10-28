@@ -10,5 +10,5 @@ public class OwnersDataDTOtoTable {
     private String personalData;
     private String forwardingAddress;
     private String dataToInvoice;
-    private String addressToInvoice;
+    private String apartmentAddress;
 }

@@ -14,12 +14,12 @@ import java.util.List;
 @Entity(name = "owner")
 public class Owner {
 
-    public Owner(Long id, String ownerName, String forwardingAddress, String dataToInvoice, String addressToInvoice) {
+    public Owner(Long id, String ownerName, String forwardingAddress, String dataToInvoice, String apartmentAddress) {
         this.id = id;
         this.ownerName = ownerName;
         this.forwardingAddress = forwardingAddress;
         this.dataToInvoice = dataToInvoice;
-        this.addressToInvoice = addressToInvoice;
+        this.apartmentAddress = apartmentAddress;
     }
 
     @Id
@@ -36,8 +36,8 @@ public class Owner {
     @Column(name = "data_to_invoice")
     private String dataToInvoice;
 
-    @Column(name = "address_to_invoice")
-    private String addressToInvoice;
+    @Column(name = "apartment_address")
+    private String apartmentAddress;
 
     @OneToMany(targetEntity = Invoice.class, mappedBy = "issuer")
     private List<Invoice> invoices;
